@@ -3,8 +3,8 @@
 The code book summarizes the result data in tidy.txt
 
 ## Identifiers
-•	activity - The type of activity performed when corresponding measurements are taken.
-•	subject - The ID of the test subject
+•	activity - The type of activity performed when corresponding measurements are taken.  
+•	subject - The ID of the test subject.    
 
 ## Measurements
 •	tBodyAccMeanX
