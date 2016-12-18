@@ -31,10 +31,13 @@ test <- cbind(testActivity, testSubject, test)
 allData <- rbind(train, test)
 colnames(allData) <- c("activity", "subject", features.names)
 
+#label the activities
 allData$activity <- factor(allData$activity, levels = activitylabels[,1], labels = activitylabels[,2])
 allData$subject <- as.factor(allData$subject)
 
+#Get the mean for each activity and subject pair
 allData.melted <- melt(allData, id.vars = c("activity", "subject"))
 allData.mean <- dcast(allData.melted, activity + subject ~ variable, mean)
 
+#output the result to tidy.txt
 write.table(allData.mean, file = "tidy.txt", quote = FALSE, row.names = FALSE)
